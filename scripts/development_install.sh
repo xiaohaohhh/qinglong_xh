@@ -35,6 +35,10 @@ npm config set registry https://registry.npmmirror.com
 TIME l "升级npm到最新版本..."
 npm install -g npm@latest
 
+# 升级pip至最新版
+TIME l "升级pip到最新版本..."
+pip install --upgrade pip
+
 # 安装系统依赖
 TIME l "安装系统依赖库..."
 apk add --no-cache build-base g++ cairo-dev pango-dev giflib-dev \
@@ -62,7 +66,9 @@ download \
 typescript \
 ts-node \
 qrcode-terminal \
-silly-datetime
+silly-datetime \
+ds \
+moment
 
 # 安装Python依赖
 TIME l "安装Python依赖..."
@@ -81,6 +87,5 @@ fi
 echo
 TIME g "所有依赖安装完成！建议重启Docker容器。"
 echo
-TIME g "问题反馈请提交至：https://github.com/your/repo"
-echo
+
 exit 0
